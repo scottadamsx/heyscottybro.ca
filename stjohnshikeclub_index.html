@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>St. John's Hike Club</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>St. John’s Hike Club</h1>
+            <p>We hike every second Sunday on the East Coast Trail. Snacks included!</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul class="nav-links">
+            <li><a href="/about">About</a></li>
+            <li><a href="/schedule">Hike Schedule</a></li>
+            <li><a href="/gallery">Gallery</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="announcement">
+        <h2>Upcoming Hike</h2>
+        <p>🔥 Join us this Sunday at <strong>4:30 PM at Middle Cove</strong> for a bonfire hike!</p>
+    </section>
+</body>
+</html>
+
