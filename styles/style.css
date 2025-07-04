@@ -1,0 +1,348 @@
+/* Reset and basic layout */
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #111;
+  color: white;
+  padding: 60px 30px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+nav {
+  margin-top: 20px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #ccc;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-list li a:hover {
+  color: white;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 60px;
+  min-height: 60vh;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  gap: 40px;
+}
+
+/* Alternating layout direction */
+section:nth-of-type(even) {
+  flex-direction: row-reverse;
+}
+
+section:nth-of-type(odd) {
+  flex-direction: row;
+}
+
+.text_content {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 50%;
+}
+
+.text_content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.text_content h4 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+/* Section Dividers */
+.section-divider {
+  height: 16px;
+}
+
+.section-divider-green {
+  background: linear-gradient(to bottom, #b0e7b2, #8fbf82, #1a5e31, #0d1a0d);
+}
+
+.section-divider-blue {
+  background: linear-gradient(to bottom, #c7e5ff, #91c9f7, #1d72b8, #0a1a2f);
+}
+
+.section-divider-orange {
+  background: linear-gradient(to bottom, #ffcaa6, #fba764, #f9692c, #3a1a00);
+}
+
+/* Individual section styles */
+#sjhc-section {
+  background-image: url('../images/hikeclub.JPG');
+}
+
+#sjhc-section h2 {
+  color: #1a5e31;
+  border-bottom: 3px solid #1a5e31;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+#never86 {
+  background-image: url('../images/forks_bg.JPG');
+}
+
+#never86 h2 {
+  border-bottom: 3px solid #1d72b8;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+#never86 h2 .never {
+  color: black;
+}
+
+#never86 h2 .eightysix {
+  color: #1d72b8;
+}
+
+#outtolunch {
+  background-image: url('../images/outtolunch.jpg');
+}
+
+#outtolunch h2 {
+  color: #f9692c;
+  border-bottom: 3px solid #f9692c;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* SCOTTY.3XE Section */
+#scotty3xe {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px;
+  min-height: 60vh;
+  background-color: #111;
+  color: #fefefe;
+  gap: 40px;
+}
+
+#scotty3xe .text_content {
+  max-width: 50%;
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 25px;
+  border-radius: 12px;
+  color: #fefefe;
+}
+
+#scotty3xe .text_content h2 {
+  font-family: 'Rubik Doodle Shadow', cursive;
+  font-size: 4rem;
+  font-weight: 900;
+  color: #ff2a2a;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+  border: none;
+}
+
+#scotty3xe .text_content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #fefefe;
+}
+
+#scotty3xe .highlight {
+  color: #b84aff;
+  font-weight: bold;
+}
+
+#scotty3xe .album-cover img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 42, 42, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  section {
+    flex-direction: column !important;
+    padding: 40px 20px;
+    min-height: auto;
+  }
+
+  .text_content {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .text_content h2 {
+    font-size: 2rem;
+  }
+
+  #scotty3xe {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #scotty3xe .album-cover img {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+}
+
+.section-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.sjhc-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 550px;
+}
+
+.sjhc-grid img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Logo inside the top of the text box */
+.sjhc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.sjhc-logo {
+  height: 120px;
+  width: auto;
+  border: solid 1px black;
+  border-radius: 12px;
+  filter: drop-shadow(0 0 5px rgba(0,0,0,0.4));
+}
+
+footer {
+  background-color: #111;
+  color: #ccc;
+  padding: 50px 30px 20px;
+  font-size: 0.95rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: auto;
+  gap: 40px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-column h3 {
+  color: white;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.footer-message {
+  font-style: italic;
+  color: #aaa;
+}
+
+.footer-links a,
+.footer-socials a,
+.footer-contact a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover,
+.footer-socials a:hover,
+.footer-contact a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 40px;
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.section-button {
+  display: inline-block;
+  padding: 12px 24px;
+  margin-top: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: 2px solid currentColor;
+  color: inherit;
+  background-color: transparent;
+}
+
+
+
+.section-button:hover {
+  background-color: #0097a7;
+}
+@media (max-width: 500px) {
+  .section-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
